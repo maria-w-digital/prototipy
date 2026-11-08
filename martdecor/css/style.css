@@ -1,0 +1,261 @@
+/* МАРТдекор — прототип. Палитра снята с логотипа: винный, олива, тёплый серый, графит */
+:root{
+  --bg:#F7F3EE; --paper:#FFFDFA; --sand:#EDE5DA; --line:#DDD2C4;
+  --wine:#6F2630; --wine-dark:#521A23; --olive:#8A8659; --olive-ink:#625F3A; --olive-soft:#E7E4D3;
+  --ink:#231F1E; --muted:#6D6560; --gold:#B08D57;
+  --r:18px; --shadow:0 14px 40px rgba(60,30,20,.08);
+  --serif:"Cormorant Garamond", Georgia, serif; --sans:"Manrope", Arial, sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1240px;margin:0 auto;padding:0 32px}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.08;letter-spacing:-.01em}
+h1{font-size:clamp(40px,5.4vw,72px)}
+h2{font-size:clamp(32px,3.6vw,48px)}
+h3{font-size:26px}
+h1,h2,h3{text-wrap:balance}
+p,li,dd,q{text-wrap:pretty}
+.grid-items.g3{grid-template-columns:repeat(3,1fr)}
+.eyebrow{font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--olive-ink);font-weight:700}
+.lead{font-size:19px;color:var(--muted);max-width:620px}
+.muted{color:var(--muted)}
+section{padding:88px 0}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:40px;flex-wrap:wrap}
+.sec-head p{max-width:520px;color:var(--muted)}
+
+/* кнопки */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 26px;border-radius:999px;border:1.5px solid var(--wine);background:var(--wine);color:#fff;font:600 15px var(--sans);text-decoration:none;cursor:pointer;transition:.2s}
+.btn:hover{background:var(--wine-dark);border-color:var(--wine-dark)}
+.btn.ghost{background:transparent;color:var(--wine)}
+.btn.ghost:hover{background:var(--wine);color:#fff}
+.btn.light{background:#fff;color:var(--wine);border-color:#fff}
+.btn i{font-size:19px}
+
+/* шапка */
+.top{background:var(--wine-dark);color:#f3e6e1;font-size:14px}
+.top .wrap{display:flex;justify-content:space-between;gap:16px;padding-top:8px;padding-bottom:8px;flex-wrap:wrap}
+.top a{text-decoration:none}
+.open-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#9bd28a;margin-right:6px}
+.open-dot.off{background:#d9a0a0}
+header.main{position:sticky;top:0;z-index:20;background:rgba(247,243,238,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header.main .wrap{display:flex;align-items:center;gap:28px;height:78px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo-arch{width:40px;height:44px;border-radius:20px 20px 3px 3px;background:linear-gradient(90deg,var(--wine) 0 33%,var(--olive) 33% 66%,#9b958d 66%);position:relative}
+.logo-arch:after{content:"";position:absolute;inset:auto 6px 0;height:22px;border-radius:12px 12px 0 0;background:var(--bg)}
+.logo b{display:block;font:700 22px/1 var(--serif);letter-spacing:.02em}
+.logo small{display:block;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+nav.menu{display:flex;gap:22px;margin-left:12px}
+nav.menu a{text-decoration:none;font-weight:500;font-size:15px}
+nav.menu a:hover,nav.menu a.on{color:var(--wine)}
+header .btn{margin-left:auto;padding:12px 20px}
+
+/* первый экран */
+.hero{padding:56px 0 72px}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.hero h1 em{font-style:italic;color:var(--wine)}
+.hero .lead{margin:22px 0 30px}
+.hero .btns{display:flex;gap:12px;flex-wrap:wrap}
+.facts3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:40px}
+.facts3 div{border-top:1px solid var(--line);padding-top:14px;font-size:14px;color:var(--muted)}
+.facts3 b{display:block;color:var(--ink);font-size:16px}
+.arch{border-radius:300px 300px var(--r) var(--r);overflow:hidden;position:relative;aspect-ratio:4/5;background:var(--sand)}
+
+/* заглушка фото */
+.ph{overflow:hidden;position:relative;background:repeating-linear-gradient(135deg,var(--sand) 0 14px,#e6dccf 14px 28px);display:flex;align-items:center;justify-content:center;text-align:center;color:var(--muted);font-size:14px;padding:18px;min-height:120px}
+.ph span{background:rgba(255,253,250,.9);padding:8px 12px;border-radius:10px;max-width:260px}
+.ph i{display:block;font-size:22px;margin:0 auto 4px;color:var(--olive)}
+.hero .arch .ph{position:absolute;inset:0}
+.swatch-float{position:absolute;bottom:28px;left:-28px;background:var(--paper);border-radius:14px;box-shadow:var(--shadow);padding:14px 18px;display:flex;gap:12px;align-items:center;font-size:14px}
+.hero-media{position:relative}
+
+/* «образец» — фирменный мотив: бирка образца с артикулом */
+.sample{display:inline-flex;align-items:center;gap:8px;font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.sample:before{content:"";width:14px;height:18px;border-radius:7px 7px 2px 2px;background:var(--olive);opacity:.8}
+
+/* подбор: три шага */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:s}
+.step{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:26px;counter-increment:s}
+.step:before{content:"0" counter(s);font:600 34px var(--serif);color:var(--wine);display:block;margin-bottom:10px}
+.step b{display:block;margin-bottom:6px}
+.step p{font-size:14px;color:var(--muted)}
+
+/* разделы */
+.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.cat{background:var(--paper);border-radius:var(--r);overflow:hidden;text-decoration:none;border:1px solid var(--line);transition:.25s;display:flex;flex-direction:column}
+.cat:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.cat .ph{aspect-ratio:4/3;min-height:0}
+.cat-body{padding:18px 20px 22px}
+.cat-body h3{font-size:24px;margin-bottom:6px}
+.cat-body p{font-size:14px;color:var(--muted)}
+.cat-body .from{margin-top:10px;font-weight:700;color:var(--wine);font-size:15px}
+
+/* карточки товаров */
+.grid-items{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.item{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;text-decoration:none;transition:.25s}
+.item:hover{box-shadow:var(--shadow);transform:translateY(-3px)}
+.item .ph{aspect-ratio:1/1;min-height:0}
+.item-body{padding:16px 18px 20px;display:flex;flex-direction:column;gap:6px;flex:1}
+.item-body h4{font-size:16px;line-height:1.35;font-weight:600}
+.price{font-weight:700;font-size:19px;margin-top:auto}
+.price small{font-weight:500;color:var(--muted);font-size:14px}
+.badge{display:inline-block;font-size:14px;padding:3px 10px;border-radius:999px;background:var(--olive-soft);color:#5a5735;font-weight:600;width:fit-content;max-width:100%}
+.badge.few{background:#f3e1dc;color:var(--wine)}
+
+/* почему мы */
+.why{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.why div{padding:28px;border-radius:var(--r);background:var(--paper);border:1px solid var(--line)}
+.why i{font-size:30px;color:var(--wine)}
+.why b{display:block;font-size:18px;margin:12px 0 6px}
+.why p{font-size:14px;color:var(--muted)}
+.why .src{font-size:14px;margin-top:10px;color:var(--olive-ink)}
+
+/* дизайнерам — тёмный блок */
+.dark{background:var(--wine-dark);color:#f6ece8}
+.dark .eyebrow{color:#d8c79c}
+.dark .lead,.dark p{color:#e3cfca}
+.pro{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.pro ul{list-style:none;display:grid;gap:14px;margin:26px 0 30px}
+.pro li{display:flex;gap:12px}
+.pro li i{color:#d8c79c;font-size:22px;flex:none}
+.event{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:var(--r);padding:26px}
+.event .date{font:600 44px/1 var(--serif);color:#fff}
+
+/* отзывы */
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.rev{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:26px;display:flex;flex-direction:column;gap:14px}
+.rev q{font-family:var(--serif);font-size:21px;line-height:1.35;quotes:"«" "»"}
+.rev .who{font-size:14px;color:var(--muted);margin-top:auto}
+.rev .who b{color:var(--ink);display:block}
+.tabs{display:flex;gap:8px;flex-wrap:wrap}
+.tab{padding:10px 18px;border-radius:999px;border:1px solid var(--line);background:transparent;font:600 14px var(--sans);cursor:pointer;color:var(--ink)}
+.tab.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+
+/* идеи */
+.ideas{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.idea{text-decoration:none;display:block}
+.idea .ph{aspect-ratio:3/4;border-radius:200px 200px var(--r) var(--r);min-height:0}
+.idea h3{font-size:24px;margin:14px 0 4px}
+.idea p{font-size:14px;color:var(--muted)}
+
+/* как добраться */
+.visit{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px}
+.visit-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:34px;display:flex;flex-direction:column;gap:18px}
+.visit-card dl{display:grid;grid-template-columns:120px 1fr;gap:10px 16px;font-size:15px}
+.visit-card dt{color:var(--muted)}
+.map{border-radius:var(--r);overflow:hidden;min-height:420px;border:1px solid var(--line);background:var(--sand)}
+.map iframe{width:100%;height:100%;min-height:420px;border:0;display:block}
+
+/* FAQ */
+.faq{max-width:860px}
+.faq details{border-bottom:1px solid var(--line);padding:20px 0}
+.faq summary{cursor:pointer;font-weight:600;font-size:18px;list-style:none;display:flex;justify-content:space-between;gap:20px}
+.faq summary:after{content:"+";font-size:26px;line-height:1;color:var(--wine)}
+.faq details[open] summary:after{content:"–"}
+.faq details p{margin-top:12px;color:var(--muted);max-width:720px}
+
+/* форма подбора */
+.brief{background:var(--paper);border-radius:28px;border:1px solid var(--line);padding:48px;display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;box-shadow:var(--shadow)}
+form.lead-form{display:grid;gap:14px}
+.seg{display:flex;gap:8px;flex-wrap:wrap}
+.seg label{cursor:pointer}
+.seg input{position:absolute;opacity:0}
+.seg span{display:inline-block;padding:10px 16px;border-radius:999px;border:1px solid var(--line);font-size:14px;font-weight:600}
+.seg input:checked+span{background:var(--wine);color:#fff;border-color:var(--wine)}
+.field{display:grid;gap:6px;font-size:14px;font-weight:600}
+.field input,.field select,.field textarea{font:15px var(--sans);padding:14px 16px;border-radius:12px;border:1px solid var(--line);background:#fff;color:var(--ink);width:100%}
+.drop{border:1.5px dashed var(--olive);border-radius:14px;padding:22px;text-align:center;color:var(--muted);font-size:14px;cursor:pointer;background:#fbfaf4}
+.drop i{font-size:26px;color:var(--olive)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.ok{display:none;background:var(--olive-soft);border-radius:14px;padding:18px;font-size:15px}
+.ok.show{display:block}
+.note-demo{font-size:14px;color:var(--muted)}
+
+/* «нужно от вас» */
+.need{border:1.5px dashed var(--gold);border-radius:12px;padding:10px 14px;font-size:14px;max-width:640px;color:#7d6538;background:#fbf6ec}
+.need b{color:#6b5428}
+
+/* каталог */
+.page-head{padding:44px 0 28px}
+.crumbs{font-size:14px;color:var(--muted);margin-bottom:14px}
+.crumbs a{text-decoration:none}
+.cat-layout>*,.product>*,.p-info>*{min-width:0}
+.field input,.field select{min-width:0}
+.cat-layout{display:grid;grid-template-columns:260px 1fr;gap:32px;padding-bottom:88px}
+aside.filters{display:flex;flex-direction:column;gap:22px;position:sticky;top:100px;align-self:start}
+aside.filters h5{font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.chk{display:flex;gap:10px;align-items:center;font-size:15px;padding:4px 0;cursor:pointer}
+.chk em{margin-left:auto;font-style:normal;color:var(--muted);font-size:14px}
+.search{display:flex;gap:10px;margin-bottom:22px;flex-wrap:wrap}
+.search input{min-width:220px}
+.search input{flex:1;font:16px var(--sans);padding:14px 18px;border-radius:999px;border:1px solid var(--line);background:#fff}
+.found{font-size:14px;color:var(--muted);margin-bottom:16px}
+.empty{padding:40px;text-align:center;color:var(--muted);background:var(--paper);border-radius:var(--r);display:none}
+
+/* карточка товара */
+.product{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;padding-bottom:72px}
+.gallery{display:grid;gap:12px;grid-template-columns:minmax(0,1fr);align-self:start}
+.gallery .ph{aspect-ratio:1/1;border-radius:var(--r);min-height:0}
+.thumbs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.thumbs .ph{aspect-ratio:1/1;border-radius:12px;min-height:0;font-size:14px;padding:6px}
+.p-info{display:flex;flex-direction:column;gap:18px}
+.p-info h1{font-size:clamp(32px,3.4vw,46px)}
+.p-price{font-size:32px;font-weight:700}
+.p-price small{font-size:15px;color:var(--muted);font-weight:500}
+.specs{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}
+.specs div{padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+.specs div:nth-child(odd){color:var(--muted)}
+.calc{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:22px;display:grid;gap:12px}
+.calc .res{font-size:18px}
+.calc .res b{color:var(--wine);font-size:24px}
+.src-line{font-size:14px;color:var(--muted)}
+
+/* статья */
+.article{max-width:800px;margin:0 auto;padding-bottom:88px}
+.article .ph{aspect-ratio:16/9;border-radius:var(--r);margin:28px 0}
+.article p{margin-bottom:16px;font-size:18px}
+.article ul{margin:0 0 20px 22px}
+.article li{margin-bottom:6px}
+
+/* подвал */
+footer{background:var(--ink);color:#cfc6c0;padding:64px 0 32px;font-size:14px}
+footer .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px}
+footer h5{color:#fff;font-size:14px;margin-bottom:12px}
+footer a{display:block;text-decoration:none;margin-bottom:6px}
+footer a:hover{color:#fff}
+footer .bottom{border-top:1px solid #3a3433;margin-top:40px;padding-top:20px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:14px;color:#9a908a}
+.logo.inv b{color:#fff}
+.logo.inv .logo-arch:after{background:var(--ink)}
+
+/* плавающая кнопка */
+.float-cta{position:fixed;right:22px;bottom:22px;z-index:30;box-shadow:var(--shadow)}
+
+/* появление */
+.rv{opacity:0;transform:translateY(18px);transition:.6s ease}
+.rv.in{opacity:1;transform:none}
+
+@media (max-width:1100px){
+  .cats,.grid-items,.ideas{grid-template-columns:repeat(3,1fr)}
+  .grid-items.g3{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  nav.menu{display:none}
+}
+@media (max-width:820px){
+  .wrap{padding:0 16px}
+  section{padding:60px 0}
+  .hero .wrap,.pro,.visit,.brief,.product,.cat-layout{grid-template-columns:1fr}
+  .cats,.grid-items,.ideas,.revs,.why{grid-template-columns:1fr 1fr}
+  .brief{padding:24px}
+  aside.filters{position:static}
+  footer .cols{grid-template-columns:1fr 1fr}
+  .swatch-float{left:12px}
+  .facts3{grid-template-columns:1fr}
+}
+@media (max-width:520px){
+  .cats,.grid-items,.grid-items.g3,.ideas,.revs,.why,.steps,.two{grid-template-columns:1fr}
+  header .btn span{display:none}
+  .visit-card dl{grid-template-columns:1fr}
+  footer .cols{grid-template-columns:1fr}
+}

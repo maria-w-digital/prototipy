@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Товар — МАРТдекор</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="item">
+
+<div class="wrap page-head" style="padding-bottom:0"></div>
+<div class="wrap product" id="product"></div>
+<section id="req" style="padding-top:0">
+  <div class="wrap">
+    <div class="brief">
+      <div>
+        <p class="eyebrow">Заказ через&nbsp;менеджера</p>
+        <h2 style="margin:10px 0 16px">Запросить наличие и&nbsp;счёт</h2>
+        <p class="muted">Уточним наличие и&nbsp;сроки поставки, проверим расчёт и&nbsp;пришлём счёт. Оплата на&nbsp;сайте не&nbsp;нужна.</p>
+      </div>
+      <div>
+        <form class="lead-form">
+          <label class="field">Товар<input id="req-item" readonly></label>
+          <div class="two"><label class="field">Количество или&nbsp;площадь<input placeholder="например, 6 рулонов"></label><label class="field">Доставка<select><option>Заберу из&nbsp;салона</option><option>По&nbsp;Ростову, Яндекс Go</option><option>В&nbsp;другой город</option></select></label></div>
+          <div class="two"><label class="field">Имя<input required></label><label class="field">Телефон<input required type="tel" placeholder="+7"></label></div>
+          <button class="btn" type="submit"><i class="ti ti-send"></i>Отправить запрос</button>
+          <p class="note-demo">Прототип: форма ничего не&nbsp;отправляет.</p>
+        </form>
+        <div class="ok"><b>Запрос принят.</b> Менеджер уточнит наличие и&nbsp;пришлёт счёт.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="eyebrow">Сочетается</p><h2>Посмотрите также</h2></div></div>
+    <div class="grid-items" id="related"></div>
+  </div>
+</section>
+
+<script src="js/typo.js"></script>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
