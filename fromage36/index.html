@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Француженка — ремесленные сыры с белой плесенью из Богучара</title>
+<meta name="description" content="Камамбер, пирамидка, бочонок и другие сыры сырной мастерской «Француженка». Доставка в Воронеж по средам, в Москву по четвергам, по России — СДЭК.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Сырная мастерская из&nbsp;Богучара</div>
+      <h1>Мы&nbsp;не&nbsp;фабрика. Мы&nbsp;— <em>мастерская</em></h1>
+      <p class="lead">Сыры с&nbsp;белой плесенью по&nbsp;французским технологиям. Сами принимаем молоко, сами заквашиваем, сами ухаживаем за&nbsp;каждой головкой в&nbsp;камере созревания. Поэтому сыров всегда немного, а&nbsp;вкус&nbsp;— настоящий.</p>
+      <div class="btns">
+        <a class="btn main" href="catalog.html"><i class="ti ti-cheese"></i>Выбрать сыр</a>
+        <a class="btn ghost" href="#sets"><i class="ti ti-gift"></i>Сырный набор в&nbsp;подарок</a>
+      </div>
+      <div class="hero-facts">
+        <div><b>Воронеж&nbsp;— по&nbsp;средам</b>адресно, бесплатно от&nbsp;2&nbsp;000&nbsp;₽</div>
+        <div><b>Москва&nbsp;— по&nbsp;четвергам</b>бесплатно от&nbsp;3&nbsp;500&nbsp;₽</div>
+        <div><b>Вся&nbsp;Россия&nbsp;— СДЭК</b>и&nbsp;магазин в&nbsp;Богучаре</div>
+      </div>
+    </div>
+    <div class="photo">
+      <span><i class="ti ti-photo"></i>Фото: Анастасия с&nbsp;головкой камамбера в&nbsp;камере созревания</span>
+      <div class="medal"><span><b>№1</b>в&nbsp;белой плесени, «Лучший сыр Сибири» 2026</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="nearest rv">
+    <i class="ti ti-truck-delivery ic"></i>
+    <div id="near-out"></div>
+    <select id="near-city" aria-label="Город доставки"></select>
+  </div>
+</div>
+
+<section id="catalog">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="eyebrow">Каталог</div><h2>Четыре семейства сыров</h2></div>
+      <p>Цены&nbsp;— как&nbsp;на&nbsp;нынешнем сайте. В&nbsp;рабочей версии каталог подтягивает остатки, и&nbsp;сыр, который ещё&nbsp;зреет, можно забронировать.</p>
+    </div>
+    <div class="cats" id="cats"></div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="eyebrow">Сыры с&nbsp;наградами</div><h2>С&nbsp;чего начать знакомство</h2></div>
+      <a class="btn ghost sm" href="catalog.html">Весь&nbsp;каталог <i class="ti ti-arrow-right"></i></a>
+    </div>
+    <div class="grid" id="hits"></div>
+  </div>
+</section>
+
+<section class="ripe" id="ripe">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Живой камамбер</div>
+      <h2>Один сыр&nbsp;— три разных вкуса</h2>
+      <p class="lead">Камамбер из&nbsp;супермаркета почти не&nbsp;меняется на&nbsp;полке. Наш&nbsp;продолжает зреть после&nbsp;упаковки&nbsp;— дата изготовления подскажет, что&nbsp;внутри. Выберите стадию:</p>
+      <div class="stages" id="stages"></div>
+      <div class="stage-text" id="stage-text"></div>
+      <p><a href="article.html?id=ripe">Подробнее о&nbsp;стадиях созревания →</a></p>
+    </div>
+    <div class="wheel" aria-hidden="true"></div>
+  </div>
+</section>
+
+<section id="sets">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="eyebrow">Подарок</div><h2>Сырные наборы</h2></div>
+      <p>В&nbsp;крафтовой упаковке, к&nbsp;любому празднику. Цены&nbsp;— из&nbsp;ответов в&nbsp;группе; в&nbsp;рабочей версии здесь фото каждого набора и&nbsp;состав.</p>
+    </div>
+    <div class="sets" id="sets-list"></div>
+  </div>
+</section>
+
+<section id="awards" style="background:var(--paper)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="eyebrow">Награды</div><h2>Сыры, которые судят профессионалы</h2></div>
+      <p>Анастасия сама входит в&nbsp;жюри конкурса «Лучший сыр Сибири».</p>
+    </div>
+    <div class="awards" id="awards-list"></div>
+  </div>
+</section>
+
+<section class="story" id="story">
+  <div class="wrap">
+    <div class="photo"><span><i class="ti ti-photo"></i>Фото: Анастасия на&nbsp;производстве</span></div>
+    <div>
+      <div class="eyebrow">Как&nbsp;всё началось</div>
+      <h2>Сыроварня, которая появилась из&nbsp;любви к&nbsp;камамберу</h2>
+      <p>Муж Анастасии очень любит камамбер. Когда&nbsp;европейские сыры исчезли с&nbsp;полок, он&nbsp;загорелся идеей делать такой сыр сам. Анастасия, инженер по&nbsp;образованию, сначала сомневалась&nbsp;— а&nbsp;потом втянулась так,&nbsp;что&nbsp;сменила профессию.</p>
+      <p>Она&nbsp;училась у&nbsp;сыроделов из&nbsp;Франции, Италии и&nbsp;России, прошла стажировки во&nbsp;Франции и&nbsp;Италии. Сегодня на&nbsp;камамбер уходит 70% всего молока сыроварни.</p>
+      <blockquote>«Создание сыров с&nbsp;белой плесенью&nbsp;— это&nbsp;своего рода женское искусство. Нужно чувствовать, ждать, быть нежной, но&nbsp;настойчивой»</blockquote>
+      <p class="src">Из&nbsp;постов группы: истории Анастасии и&nbsp;её&nbsp;поздравления 8 Марта.</p>
+    </div>
+  </div>
+</section>
+
+<section id="buy" style="background:var(--paper)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="eyebrow">Как&nbsp;купить</div><h2>Доставка и&nbsp;магазины</h2></div>
+      <p>Самый частый вопрос в&nbsp;группе&nbsp;— где&nbsp;купить и&nbsp;привезёте&nbsp;ли в&nbsp;мой&nbsp;город. Здесь ответ на&nbsp;одном экране.</p>
+    </div>
+    <div class="buy">
+      <div>
+        <div class="del-list" id="del-list"></div>
+        <div class="need" style="margin-top:14px">стоимость доставки, если&nbsp;сумма меньше порога, и&nbsp;способы оплаты</div>
+      </div>
+      <div class="shops" id="shops"></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head"><div><div class="eyebrow">Отзывы</div><h2>Что&nbsp;пишут покупатели</h2></div><p>Дословно из&nbsp;комментариев ВКонтакте и&nbsp;отзывов на&nbsp;Яндекс Картах.</p></div>
+    <div class="reviews" id="reviews"></div>
+  </div>
+</section>
+
+<section id="tips" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><div><div class="eyebrow">Советы сыровара</div><h2>Как&nbsp;есть, хранить и&nbsp;с&nbsp;чем&nbsp;подавать</h2></div></div>
+    <div class="arts" id="arts"></div>
+  </div>
+</section>
+
+<section style="background:var(--paper)">
+  <div class="wrap">
+    <div class="sec-head"><div><div class="eyebrow">Частые вопросы</div><h2>Ответы из&nbsp;переписки с&nbsp;покупателями</h2></div></div>
+    <div class="faq" id="faq"></div>
+  </div>
+</section>
+
+<script src="js/typo.js"></script>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
